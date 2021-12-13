@@ -9,7 +9,7 @@ public class Thanos {
     	
     	Comparator<Hero> comparator = new Comparator<Hero>() {
     		public int compare(Hero hero1, Hero hero2) {
-    			return hero1.getName().compareTo(hero2.getName());
+    			return hero2.getAge() - hero1.getAge();
     		}
     	};
 
@@ -21,12 +21,12 @@ public class Thanos {
 
         // TODO 1 : Modify Hero to implements Comparable and sort by name (ascending)
         System.out.println("\nOrder by name:");
-        Collections.sort(heroes, comparator);
+        Collections.sort(heroes);
         showList(heroes);
 
         // TODO 2: Add a Comparator and sort by age (descending)
         System.out.println("\nOrder by age:");
-        Collections.sort(heroes);
+        Collections.sort(heroes, comparator);
         showList(heroes);
     }
 

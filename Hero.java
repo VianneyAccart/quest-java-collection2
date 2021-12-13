@@ -32,7 +32,7 @@ public class Hero implements Comparable<Hero> {
 	@Override
 	public int compareTo(Hero hero) {
 		// TODO Auto-generated method stub
-		return hero.getAge() - this.getAge();
+		return this.getName().compareTo(hero.getName());
 	}
 
 }
